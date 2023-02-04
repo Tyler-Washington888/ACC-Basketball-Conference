@@ -1,11 +1,11 @@
 const express = require('express')
 const router = express.Router();
-const {getTeams, getTeam} = require('../controllers/teamController')
+const {getTeams, getTeam, createTeam, updateTeam} = require('../controllers/teamController')
 
 
-// get all teams
-router.route('/').get(getTeams)
-// get team
-router.route('/:teamID').get(getTeam)
+// get teams && post team
+router.route('/').get(getTeams).post(createTeam)
+// get team && update team
+router.route('/:teamID').get(getTeam).put(updateTeam)
 
-module.exports = router ;
+module.exports = router;

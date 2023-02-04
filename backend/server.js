@@ -12,7 +12,16 @@ db.connect((err) => {
     console.log(`MySQL Connected...`.blue.underline)
 });
 
+
 const app = express();
+
+
+app.use(express.json())
+app.use(
+  express.urlencoded({
+    extended: true,
+  })
+);
 
 app.use('/teams', require('./routes/teamRoutes'))
 // app.use('/players', require('./routes/playerRoutes'))

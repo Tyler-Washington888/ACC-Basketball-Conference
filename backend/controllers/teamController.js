@@ -4,28 +4,54 @@ const db = require("../config/db");
 // @desc Get teams
 // @route GET /teams/
 // @Paccess Public
-const getTeams = ((req, res) => {
+const getTeams = ( async (req, res) => {
     let sql = 'SELECT * FROM Teams';
-    db.query(sql, (err, teams) => {
+    await db.query(sql, (err, teams) => {
         if(err) throw err;
         res.status(200).json({teams});
     })
 })
 
-// @desc Get one team
-// @route GEt/teams/:teamID
+// @desc GET team
+// @route GET /teams/:teamID
 // @access Public 
-const getTeam = ((req, res) => {
+const getTeam = ( async (req, res) => {
   let sql = `SELECT * FROM Teams WHERE TeamID = ${req.params.teamID}`;
-  let query = db.query(sql, (err, team)  => {
+  let query = await db.query(sql, (err, team)  => {
     if (err) throw err;
     res.status(200).json({team});
+  });
+})
+
+//@desc POST team
+//@route POST /teams/
+//@access Public
+const createTeam = ( async (req, res) => {
+  let values = [[req.body.TeamName, req.body.Mascot]]
+  let sql = `INSERT INTO Teams(TeamName, Mascot) VALUES ?`
+  let query = await db.query(sql, [values], (err, result) => {
+    if (err) throw err;
+    console.log()
+    res.status(200).json(result);
+  })
+})
+
+//@desc PUT team
+//@route PUT /teams/:teamID
+//@access Public
+const updateTeam = (async (req, res) => {
+  console.log(req.params.teamID)
+  let sql = `UPDATE Teams SET ? WHERE TeamID = ${req.params.teamID}`;
+  let query = await db.query(sql, [{TeamName: req.body.TeamName, Mascot: req.body.Mascot}], (err, result) => {
+    if(err) throw err;
+    res.status(200).json(result);
   })
 })
 
 
-
 module.exports = {
   getTeams,
-  getTeam
+  getTeam,
+  createTeam,
+  updateTeam
 };
