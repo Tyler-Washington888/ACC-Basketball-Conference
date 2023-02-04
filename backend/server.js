@@ -1,5 +1,4 @@
 const express = require('express')
-const app = express()
 const db = require("./config/db");
 const colors = require('colors')
 
@@ -13,7 +12,13 @@ db.connect((err) => {
     console.log(`MySQL Connected...`.blue.underline)
 });
 
- 
+
+const app = express();
+
+app.use('/teams', require('./routes/teamRoutes'))
+// app.use('/players', require('./routes/playerRoutes'))
+
+
 app.listen('3000' , () => {
     console.log('Server started on port 3000'.yellow.underline)
 })
