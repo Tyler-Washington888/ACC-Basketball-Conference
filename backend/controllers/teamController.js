@@ -6,13 +6,26 @@ const db = require("../config/db");
 // @Paccess Public
 const getTeams = ((req, res) => {
     let sql = 'SELECT * FROM Teams';
-    db.query(sql, (err, result) => {
+    db.query(sql, (err, teams) => {
         if(err) throw err;
-        res.status(200).json({result})
+        res.status(200).json({teams});
     })
 })
 
+// @desc Get one team
+// @route GEt/teams/:teamID
+// @access Public 
+const getTeam = ((req, res) => {
+  let sql = `SELECT * FROM Teams WHERE TeamID = ${req.params.teamID}`;
+  let query = db.query(sql, (err, team)  => {
+    if (err) throw err;
+    res.status(200).json({team});
+  })
+})
+
+
 
 module.exports = {
-  getTeams
+  getTeams,
+  getTeam
 };

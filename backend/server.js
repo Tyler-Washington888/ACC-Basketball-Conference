@@ -12,7 +12,6 @@ db.connect((err) => {
     console.log(`MySQL Connected...`.blue.underline)
 });
 
-
 const app = express();
 
 app.use('/teams', require('./routes/teamRoutes'))
