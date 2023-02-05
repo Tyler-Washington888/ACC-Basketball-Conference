@@ -44,7 +44,7 @@
 
 #### ERD Model
 
-![Dummy Link](https://res.cloudinary.com/tylerwashington98/image/upload/v1641006604/Meta-Minds/Screen_Shot_2021-12-31_at_10.09.24_PM_w2ppna.png)
+![Dummy Link](https://res.cloudinary.com/tylerwashington98/image/upload/v1675587163/acc-basketball-conference/Screen_Shot_2023-02-05_at_3.22.39_AM_jifibz.png)
 
 <br>
 
