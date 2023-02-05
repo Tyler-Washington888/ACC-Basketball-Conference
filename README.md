@@ -12,19 +12,7 @@
 
 ## Project Overview
 
-**ACC-Basketball-Conference** 
-
-<br>
-
-## MVP
-
--
-
-<br>
-
-### Goals
-
-- Full CRUD, REST API built with Node.js, Express, and MySQL.
+**ACC-Basketball-Conference** is a backend app I built to gain experience using MySQL in tandem with Node.js and Express. In this project users have access to the acc_basketball_conference database where they can perform full crud operations on both the Teams and Players table. Additonally, they can utilize the relationships between the tables to find the number of players on each team.
 
 <br>
 
@@ -50,10 +38,6 @@
 
 ***
 
-## Post-MVP
-
-- 
-
 ***
 ## Code Showcase
 
@@ -63,6 +47,7 @@ This middleware fuunction 'getNumOfPlayers' was my favorite snippet from this pr
 //@desc GET number of players on each team
 //@route GET /numofplayers
 //@access Public 
+
 const getNumOfPlayers = (async (req, res) => {
     let sql = `SELECT Teams.TeamName AS Team, COUNT(Players.PlayerID) AS "Num of Players" FROM Players RIGHT JOIN Teams ON Players.TeamID = Teams.TeamID GROUP BY TeamName ORDER BY Teams.TeamName`;
     let query = await db.query(sql, (err, teams) => {
