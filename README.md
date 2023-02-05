@@ -1,10 +1,8 @@
 # ACC-Basketball-Conference
 - [Overview](#overview)
-- [MVP](#mvp)
   - [Goals](#goals)
   - [Libraries and Dependencies](#libraries-and-dependencies)
-  - [Server (Back End)](#server)
-    - [ERD Model](#erd-model)
+  - [ERD Model](#erd-model)
 - [Post-MVP](#post-mvp)
 - [Code Showcase](#code-showcase)
 
@@ -27,8 +25,6 @@
 | nodemon | command-line tool that automatically restarts app when it detects changes|
 
 <br>
-
-### Server (Back End)
 
 #### ERD Model
 
