@@ -40,7 +40,6 @@ const createTeam = ( async (req, res) => {
 //@route PUT /teams/:teamID
 //@access Public
 const updateTeam = (async (req, res) => {
-  console.log(req.params.teamID)
   let sql = `UPDATE Teams SET ? WHERE TeamID = ${req.params.teamID}`;
   let query = await db.query(sql, [{TeamName: req.body.TeamName, Mascot: req.body.Mascot}], (err, result) => {
     if(err) throw err;
@@ -49,9 +48,22 @@ const updateTeam = (async (req, res) => {
 })
 
 
+//@desc DELETE team
+//@desc DELETE /teams/:teamID
+//@access PUBLIC
+const deleteTeam = (async (req, res) => {
+  let sql = `DELETE FROM teams where TeamID = ${req.params.teamID}`
+  let query = await db.query(sql, (err, result) => {
+    if(err) throw err;
+    res.status(200).json(result)
+  })
+})
+
+
 module.exports = {
   getTeams,
   getTeam,
   createTeam,
-  updateTeam
+  updateTeam,
+  deleteTeam
 };
