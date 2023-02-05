@@ -32,7 +32,7 @@
 
 ## Code Showcase
 
-This middleware fuunction 'getNumOfPlayers' was my favorite snippet from this project. It allowed me to show the number of players on each team by performing a right join.
+This middleware function 'getNumOfPlayers' was my favorite snippet from this project. It allowed me to show the number of players on each team by performing a right join.
 
 ```
 //@desc GET number of players on each team
