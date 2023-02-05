@@ -1,9 +1,7 @@
 # ACC-Basketball-Conference
 - [Overview](#overview)
-  - [Goals](#goals)
-  - [Libraries and Dependencies](#libraries-and-dependencies)
-  - [ERD Model](#erd-model)
-- [Post-MVP](#post-mvp)
+- [Libraries and Dependencies](#libraries-and-dependencies)
+- [ERD Model](#erd-model)
 - [Code Showcase](#code-showcase)
 
 <br>
