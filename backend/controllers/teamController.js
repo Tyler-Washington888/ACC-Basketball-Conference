@@ -51,7 +51,7 @@ const updateTeam = (async (req, res) => {
 //@desc DELETE /teams/:teamID
 //@access PUBLIC
 const deleteTeam = (async (req, res) => {
-  let sql = `DELETE FROM teams where TeamID = ${req.params.teamID}`
+  let sql = `DELETE FROM Teams WHERE TeamID = ${req.params.teamID}`
   let query = await db.query(sql, (err, result) => {
     if(err) throw err;
     res.status(200).json(result)
