@@ -48,8 +48,8 @@ const updateTeam = (async (req, res) => {
 
 
 //@desc DELETE team
-//@desc DELETE /teams/:teamID
-//@access PUBLIC
+//@route DELETE /teams/:teamID
+//@access Public
 const deleteTeam = (async (req, res) => {
   let sql = `DELETE FROM Teams WHERE TeamID = ${req.params.teamID}`
   let query = await db.query(sql, (err, result) => {
@@ -58,11 +58,10 @@ const deleteTeam = (async (req, res) => {
   })
 })
 
-
 module.exports = {
   getTeams,
   getTeam,
   createTeam,
   updateTeam,
-  deleteTeam
+  deleteTeam,
 };

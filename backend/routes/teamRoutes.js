@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router();
-const {getTeams, getTeam, createTeam, updateTeam, deleteTeam} = require('../controllers/teamController');
+const {getTeams, getTeam, createTeam, updateTeam, deleteTeam, getNumOfPlayers} = require('../controllers/teamController');
 
 
 // get teams && post team

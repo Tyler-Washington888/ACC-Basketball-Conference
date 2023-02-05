@@ -24,6 +24,7 @@ app.use(
 
 app.use('/teams', require('./routes/teamRoutes'));
 app.use('/players', require('./routes/playerRoutes'));
+app.use('/numofplayers', require('./routes/teamplayerRoutes'))
 
 
 app.listen('3000' , () => {

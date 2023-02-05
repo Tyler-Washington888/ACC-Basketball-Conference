@@ -61,7 +61,7 @@ const deletePlayer = ( async (req, res) => {
 module.exports = {
     getPlayers,
     createPlayer,
-    getPlayer, 
+    getPlayer,
     updatePlayer,
     deletePlayer
 }
