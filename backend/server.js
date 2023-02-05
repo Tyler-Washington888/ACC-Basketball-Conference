@@ -15,7 +15,6 @@ db.connect((err) => {
 
 const app = express();
 
-
 app.use(express.json())
 app.use(
   express.urlencoded({
@@ -23,8 +22,8 @@ app.use(
   })
 );
 
-app.use('/teams', require('./routes/teamRoutes'))
-// app.use('/players', require('./routes/playerRoutes'))
+app.use('/teams', require('./routes/teamRoutes'));
+app.use('/players', require('./routes/playerRoutes'));
 
 
 app.listen('3000' , () => {

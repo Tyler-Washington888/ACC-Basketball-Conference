@@ -27,11 +27,10 @@ const getTeam = ( async (req, res) => {
 //@route POST /teams/
 //@access Public
 const createTeam = ( async (req, res) => {
-  let values = [[req.body.TeamName, req.body.Mascot]]
+  let team = [[req.body.TeamName, req.body.Mascot]]
   let sql = `INSERT INTO Teams(TeamName, Mascot) VALUES ?`
-  let query = await db.query(sql, [values], (err, result) => {
+  let query = await db.query(sql, [team], (err, result) => {
     if (err) throw err;
-    console.log()
     res.status(200).json(result);
   })
 })
