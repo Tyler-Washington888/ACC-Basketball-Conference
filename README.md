@@ -12,7 +12,7 @@
 
 <br>
 
-### Libraries and Dependencies
+## Libraries and Dependencies
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- | 
@@ -24,7 +24,7 @@
 
 <br>
 
-#### ERD Model
+## ERD Model
 
 ![Dummy Link](https://res.cloudinary.com/tylerwashington98/image/upload/v1675587163/acc-basketball-conference/Screen_Shot_2023-02-05_at_3.22.39_AM_jifibz.png)
 
